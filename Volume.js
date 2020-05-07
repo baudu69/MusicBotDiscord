@@ -4,8 +4,7 @@ class Volume {
     }
 
     getVolume() {
-        let volumeString = (this.roundDecimal(this.leVolume, 2) * 100).toString() + '%'
-        return volumeString;
+        return (this.roundDecimal(this.leVolume, 2) * 100).toString() + '%';
     }
 
     setVolume(leVolume) {

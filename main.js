@@ -7,8 +7,17 @@ bot.on('ready', function () {
     console.log("Je suis connecté !")
 })
 
-
-bot.login('NzA3NzAzOTQ0MjM4OTg5NDU5.XrMr2w.e11KK6f_FAccjSpoG8H0wZox9zs')
+/* Ajouter le fichier Token.js remplit comme suit :
+class Token {
+    getToken() {
+        return 'TOKEN'
+    }
+}
+module.exports = Token
+ */
+const Token = require('./Token.js')
+let token = new Token()
+bot.login(token.getToken())
 
 let dispatcher
 const Volume = require('./Volume.js')
